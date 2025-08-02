@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* colors */
+    --primary: #18181869;
+    --gray-light: rgba(128, 128, 128, 0.418);
+    --gray-normal: rgb(134, 129, 129);
+    --white: white;
+
+    /* Fonts */
+    --font: Arial, Helvetica, sans-serif;
+    --small-font: 17px;
+
+    /* margin and padding */
+    --margin: 1rem;
+    --padding: 2rem;
+}
+
+nav a {
+    list-style: none;
+    color: var(--gray-normal);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+}
+
+nav a:active {
+    transform: translateY(-0.5rem);
+}
+
+li:hover {
+    color: var(--white);
+}
+
+header {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--small-font);
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin);
+    padding: var(--padding);
+    position: sticky;
+    z-index: 10;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white ;
+}
+
+.nav-container{
+    display: flex;
+    cursor: pointer;
+
+}
+
+
+nav {
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 0.2rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+#sidebar-active{
+    display: none;
+}
+
+nav .open-sidebar-btn, nav .close-sidebar-btn{
+    padding: 0 20px;
+    display: none;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+
+
+.logo {
+    color: var(--white);
+    transform: scale(1.9) translate(1rem);
+    letter-spacing: 0.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* hero section */
+
+main .hero {
+    height: 100vh;
+    position: relative;
+    top: -9.2rem;
+    display: flex;
+    background-image:url(https://images.pexels.com/photos/3178786/pexels-photo-3178786.jpeg?cs=srgb&dl=pexels-andrew-3178786.jpg&fm=jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+main .hero .hero-left {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    line-height: 1.5;
+
+}
+
+main .hero .hero-left .hero-text {
+    font-family: var(--font);
+    letter-spacing: 0.1rem;
+    margin: 2rem;
+}
+
+main .hero .hero-left .hero-text p {
+    font-weight: bolder;
+    color: white;
+}
+
+main .hero .hero-left .hero-text .name {
+    font-size: 4rem;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+
+main .hero .hero-left .hero-text .passn-cont{
+    color: white;
+}
+
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor {
+    width: fit-content;
+    position: relative;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+/* Animation */
+.typewriter-animation {
+    animation:
+        typewriter 3s steps(50) 1s infinite,
+        blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkingCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+
+
+main .hero .hero-left .hero-btn {
+    position: absolute;
+    top: 70vh;
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+main .hero .hero-left .hero-btn .blck-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #181818;
+    padding: 0.7rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+
+}
+
+main .hero .hero-left .hero-btn .wht-btn {
+    text-decoration: none;
+    border: 1.5px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 0.7rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+
+}
+
+
+
+main .hero .hero-right {
+    background-color: var(--primary);
+    background-size: cover;
+    background-position:top;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+main .hero .hero-right .get-cv a {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    text-decoration: none;
+    color: var(--white);
+    border: 2px solid white;
+    padding: 0.9rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+main .hero .hero-right .get-cv a::before {
+    content: "";
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 2px solid white;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: -80%;
+    top: -50%;
+
+}
+
+main .hero .hero-right .social-media {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    height: 70%;
+    width: 20%;
+}
+
+main .hero .hero-right .social-media i {
+    transform: scale(1.6);
+    width: max-content;
+}
+main .hero .hero-right .social-media a {
+   color: white;
+}
+
+
+
+
+/* about section */
+
+
+
+.about {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/007/278/150/non_2x/dark-background-abstract-with-light-effect-vector.jpg);
+    background-size: cover;
+}
+
+.about-container{
+ display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 1.5rem;
+  margin: 1rem;
+  transform: translateY(-20%);
+}
+
+.section-num{
+    font-size: 150px;
+    color: rgba(128, 128, 128, 0.55);
+    font-weight: 600;
+}
+.section-name{
+    font-size: 50px;
+    transform: translate(20px, -110px);
+    color: white;
+}
+
+.about-image {
+  flex: 1;
+  position: relative;
+  min-width: 100px;
+}
+
+.about-image img {
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 0 0, -15px -15px 0px black;
+  transition: 0.3s ease;
+    filter: brightness(50%);
+}
+
+.about-image img:hover{
+  transform: translateY(-20px);
+}
+
+
+.about-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  transform: translateY(-40%);
+}
